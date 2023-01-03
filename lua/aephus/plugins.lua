@@ -55,7 +55,7 @@ return packer.startup(function(use)
 
 	use("nvim-telescope/telescope.nvim")
 
-	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -68,6 +68,12 @@ return packer.startup(function(use)
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	use("lewis6991/gitsigns.nvim")
+	use("kyazdani42/nvim-web-devicons")
+	use("kyazdani42/nvim-tree.lua")
+
+	use("akinsho/toggleterm.nvim")
+	use("nvim-lualine/lualine.nvim")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
