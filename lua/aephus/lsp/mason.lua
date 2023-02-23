@@ -8,6 +8,7 @@ local servers = {
 	"bashls",
 	"cssls",
 	"yamlls",
+	"cmake",
 }
 
 local settings = {

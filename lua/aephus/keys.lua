@@ -19,6 +19,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<leader>bx", ":bw<CR>", opts)
 
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
