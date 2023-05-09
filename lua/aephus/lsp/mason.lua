@@ -1,5 +1,5 @@
 local servers = {
-	"sumneko_lua",
+	"lua_ls",
 	"pyright",
 	"jsonls",
 	"clangd",
@@ -9,6 +9,8 @@ local servers = {
 	"cssls",
 	"yamlls",
 	"cmake",
+	"svelte",
+	"tailwindcss"
 }
 
 local settings = {
