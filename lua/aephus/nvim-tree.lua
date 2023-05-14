@@ -9,6 +9,7 @@ if not config_status_ok then
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
+
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
 
@@ -90,7 +91,6 @@ end
 nvim_tree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,
-	open_on_setup = false,
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = true,

@@ -1,21 +1,3 @@
-local fn = vim.fn
-
--- Auto install packer.nvim if not exists
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-	PACKER_BOOTSTRAP =
-		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-	print("Installing packer.nvim...")
-	vim.cmd("packadd packer.nvim")
-end
-
-vim.cmd([[
-augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
-]])
-
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
 	return
@@ -36,6 +18,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("ellisonleao/gruvbox.nvim")
+	use("christoomey/vim-tmux-navigator.nvim")
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")
@@ -54,8 +37,8 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 
 	use("nvim-telescope/telescope.nvim")
-
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run =
+	'make' }
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -73,8 +56,4 @@ return packer.startup(function(use)
 
 	use("akinsho/toggleterm.nvim")
 	use("nvim-lualine/lualine.nvim")
-
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
 end)
