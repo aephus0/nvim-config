@@ -10,10 +10,10 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Better window movement
 
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", ":TmuxNavigatorLeft<CR>", opts)
+keymap("n", "<C-j>", ":TmuxNavigatorDown<CR>", opts)
+keymap("n", "<C-k>", ":TmuxNavigatorUp<CR>", opts)
+keymap("n", "<C-l>", ":TmuxNavigatorRight<CR>", opts)
 
 -- Navigate buffers
 

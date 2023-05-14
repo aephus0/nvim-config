@@ -1,4 +1,4 @@
-require("aephus.opt")
+require("aephus.options")
 require("aephus.keys")
 require("aephus.plugins")
 require("aephus.colorscheme")
